@@ -13,7 +13,7 @@ router.route('/add').post((req, res) => {
 	const newExercise = new Exercise({username, description, duration, date});
 
 	newExercise.save().then(() => res.json('Exercise Added!')).catch(err => res.status(400).json('Error: '+ err));
-	newUser.save().then(() => res.json('User Added!')).catch(err => res.status(400).json('Error: '+ err));
+	newExercise.save().then(() => res.json('User Added!')).catch(err => res.status(400).json('Error: '+ err));
 });
 
 module.exports = router;
